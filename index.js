@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose=require("mongoose")
 const {Shorten}=require("./model/shorten")
 const {uid}=require("uid")
-const PORT=3000 
+const PORT=process.env.PORT || 3000 ;
 const DB = `mongodb+srv://jamudawa2:ayGNdH16ru30XAFC@cluster0.um2ki1w.mongodb.net/shorten?retryWrites=true&w=majority`;
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: false }));
