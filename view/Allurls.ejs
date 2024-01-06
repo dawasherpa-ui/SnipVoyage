@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnipVoyage | <%= title %></title>
+    <link rel="stylesheet" href="/style/allurls.css">
+</head>
+<body>
+    <%- include('particles/Header.ejs') %>
+    <h1>All Urls</h1>
+    <div class="urls">
+        <% if (urls.length>0) { %>
+            <ul>
+                <% for(let i = 0; i < urls.length; i++) { %>
+                    <li><p><%= urls[i].url %></p><a href="http://localhost:3000/<%= urls[i].link %>" target="_blank">http://localhost:3000/<%=  urls[i].link %></a></li>
+                        <% } %>
+                        </ul>
+        <% } else {%>
+            <h2>No URLs yet.</h2>
+            <% }%>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnipVoyage | <%= title %></title>
+    <link rel="stylesheet" href="/style/search.css">
+  </head>
+  <body>
+    <%- include('particles/Header.ejs') %>
+    <main>
+        <h1 class="heading">View Engine</h1>
+      <form method="get" onsubmit="updateAction()">
+        <h2>Link Code</h2>
+        <input type="text" id="linkCodeInput" placeholder="0fc9g2" required/>
+        <button type="submit">Search</button>
+      </form>
+      <div class="notice">
+        <p>
+            *Notice: Paste the back code of redirect link to see the details of the url.  
+            Eg: Paste the highlighted code (http://www.localhost:3000/<mark>0f3h3s</mark>)
+        </p>
+      </div>
+    </main>
+    <script>
+        function updateAction() {
+          var linkCode = document.getElementById("linkCodeInput").value;
+          var form = document.querySelector("form");
+          form.action = "/urls/view/" + linkCode;
+        }
+      </script>
+  </body>
+</html>

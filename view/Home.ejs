@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnipVoyage | <%= title %></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/style/style.css"/>
+</head>
+<body>
+    <%- include('particles/Header.ejs') %>
+    <h1 class="heading">Generate Short Url</h1>
+    <div>
+        <form method="post" action="/">
+            <input type="text" name="url" placeholder="https://www.example.com" required/>
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+    <div class="redirect">
+        <% if (typeof data !== 'undefined' && data && data.url) { %>
+            <h2>This is your redirect Url:</h2>
+            <a href="http://localhost:3000/<%= data.link %>" target="_blank">http://localhost:3000/<%= data.link %></a>
+        <% } %>
+    </div>
+</body>
+</html>

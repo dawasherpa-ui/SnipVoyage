@@ -1,0 +1,59 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size: 32px;
+    color: #3c4858;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.url-card{
+    width: 96%;
+    height: auto;
+    display: flex;
+    gap:15px;
+    align-items: center;
+    margin: 10px 10px;
+    transition: .3s all ease-in-out;
+}
+.url-card h3{
+    font-weight: normal;
+    font-size: 28px;
+    color: #7f8c8d;
+    
+}
+.url-card p{
+    max-width: 70%;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #7f8c8d;
+    word-wrap: break-word;
+}
+.url-card div{
+    display: inline-block;
+    flex-grow: 1;
+}
+.url-card a{
+    /*text-decoration: none;*/
+    color: #3c4858;
+    font-size: 22px;
+    cursor: pointer;
+    &:hover{
+        color:#ffa600;
+        }
+}
+@media only screen and (max-width: 768px) {
+    .url-card{
+        flex-direction: column;
+        align-items:normal;
+        margin: 10px;
+        }
+        .url-card a, .url-card p{
+            font-size: 1.2rem;
+            }
+    }

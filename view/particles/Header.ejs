@@ -1,0 +1,63 @@
+<style>
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav ul.menu {
+    list-style: none;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .menu li h1 {
+    font-size: 26px;
+    margin-top: 0px;
+  }
+  .menu li h1 a {
+    color: #ffa600;
+    text-decoration: none;
+  }
+  .menu li h3 a {
+    color: white;
+    text-decoration: none;
+  }
+  nav ul.menu li h3 {
+    font-size: medium;
+    font-weight: 600;
+    padding: 8px;
+    cursor: pointer;
+  }
+  nav ul.menu li h3 a:hover {
+    color: #ffa600;
+  }
+  @media screen and (max-width: 600px) {
+    ul li h3 a{
+      font-size: 3.3vw;
+    }
+    ul li h1 a{
+      font-size: 20px;
+    }
+  }
+</style>
+<header>
+  <nav>
+    <ul class="menu">
+      <li>
+        <h1><a href="/">SnipVoyage</a></h1>
+      </li>
+      <li>
+        <h3><a href="/">Home</a></h3>
+      </li>
+      <li>
+        <h3><a href="/urls/all">All Urls</a></h3>
+      </li>
+      <li>
+        <h3><a href="/urls/view">View Engine</a></h3>
+      </li>
+    </ul>
+  </nav>
+</header>
