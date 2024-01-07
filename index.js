@@ -5,7 +5,7 @@ const mongoose=require("mongoose")
 const {Shorten}=require("./model/shorten")
 const {uid}=require("uid")
 const PORT=process.env.PORT || 3000 ;
-const DB = `mongodb+srv://jamudawa2:ayGNdH16ru30XAFC@cluster0.um2ki1w.mongodb.net/shorten?retryWrites=true&w=majority`;
+const DB = process.env.Mongo_Url;
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set("view engine","ejs");
